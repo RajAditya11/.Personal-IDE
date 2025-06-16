@@ -8,6 +8,12 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+//for backend on render host we include
+app.get('/', (req, res) => {
+  res.send('Backend is up and running!');
+});
+
+
 app.post('/run', (req, res) => {
   const { code, language, input } = req.body;
 
