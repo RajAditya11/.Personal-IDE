@@ -20,7 +20,7 @@ function App() {
 
   const handleRun = async () => {
     try {
-      const response = await fetch('http://localhost:3001/run', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/run`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code, language, input })

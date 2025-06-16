@@ -2,3 +2,4 @@
 
 **/node_modules/
 #to ignore all the node_modules where ever in the project
+.vercel
